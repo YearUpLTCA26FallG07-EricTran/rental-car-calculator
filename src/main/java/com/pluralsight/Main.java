@@ -17,7 +17,7 @@ public class Main {
                 """);
 
         String userSelection = scanner.nextLine();
-        if (userSelection == "1") {
+        if (userSelection.equals("1")) {
             //Creating reservation object
             Reservation newReservation = new Reservation();
             //Asks them for pickup date
@@ -28,6 +28,39 @@ public class Main {
             //Asks them for number of days
             System.out.println("How many days: ");
             int numberOfDays = Integer.parseInt(scanner.nextLine());
+            newReservation.setNumberOfDays(numberOfDays);
+            
+            
+            //ask if they want electric toll tag
+            System.out.println("Toll tag Y/N: ");
+            String tollAnswer = scanner.nextLine();
+            boolean acceptsTollTag = tollAnswer.equalsIgnoreCase("Y");
+            newReservation.setAcceptsTollTag(acceptsTollTag);
+
+            //ask if they want gps
+            System.out.println("GPS Y/N: ");
+            String gpsAnswer = scanner.nextLine();
+            boolean acceptsGps = gpsAnswer.equalsIgnoreCase("Y");
+            newReservation.setAcceptsTollTag(acceptsGps);
+
+            //asks if they want roadside assistance
+            System.out.println("RoadSide Assistance Y/N: ");
+            String roadSideAnswer = scanner.nextLine();
+            boolean acceptsRoadSide = roadSideAnswer.equalsIgnoreCase("Y");
+            newReservation.setAcceptsTollTag(acceptsRoadSide);
+
+
+            //asks for the user age
+            System.out.println("Current Age: ");
+            int userAge = scanner.nextInt();
+            newReservation.setDriverCurrentAge(userAge); 
+
+
+
+
+
+
+
 
 
         }
@@ -36,4 +69,8 @@ public class Main {
     }
 
 
+}
+
+public static double carRentalCalculation(Reservation reservation) {
+    double basicRental =
 }

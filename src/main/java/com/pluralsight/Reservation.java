@@ -45,7 +45,7 @@ public class Reservation {
     }
 
     public boolean isAcceptsTollTag() {
-        return acceptsTollTag;
+        return this.acceptsTollTag;
     }
 
     public void setAcceptsTollTag(boolean acceptsTollTag) {
@@ -53,7 +53,7 @@ public class Reservation {
     }
 
     public boolean isAcceptsGps() {
-        return acceptsGps;
+        return this.acceptsGps;
     }
 
     public void setAcceptsGps(boolean acceptsGps) {
@@ -61,7 +61,7 @@ public class Reservation {
     }
 
     public boolean isAcceptsRoadSide() {
-        return acceptsRoadSide;
+        return this.acceptsRoadSide;
     }
 
     public void setAcceptsRoadSide(boolean acceptsRoadSide) {
